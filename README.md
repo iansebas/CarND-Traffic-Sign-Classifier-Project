@@ -46,10 +46,10 @@ I used LeNet without any modifications to the original architecture. I chose not
 
 The details of my training scheme are as follow:
 
-epochs : 24
-batch size : 64
-optimizer : tf.train.AdamOptimizer(learning_rate = 0.001)
-initializer :  tf.contrib.layers.xavier_initializer()
+epochs : 24,	
+batch size : 64,	
+optimizer : tf.train.AdamOptimizer(learning_rate = 0.001) ,	
+initializer :  tf.contrib.layers.xavier_initializer(),	
 
 ### Solution Approach
 
@@ -70,7 +70,7 @@ The images were re-sized to 32x32. Interestingly enough, three images of the sam
 I achived an accuracy of 80%. This result is noticeably lower than the result on test set (92.2%).  However, it is important to notice that the new images dataset is only 5 images, and thus accuracy fluctation cannot be considered wholy representative.
 
 ### Model Certainty
-In all the 5 images, including the misclassified sample, the network shows high certainty on its "decision". The probabilities are virtually 100% in all cases. This could indicate that the network is overfitting as it failed to attain 100% accuracy.
+In all the 5 images, including the misclassified sample, the network shows high certainty on its "decision". The probabilities are virtually 100% in all cases. This could indicate that the network is overfitting as it failed to attain 100% accuracy. The certainties of the misclassified image are shown below:
 
 ![alt text](./img/certain.png "Model Certainty")
 
